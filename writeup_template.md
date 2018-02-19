@@ -1,10 +1,5 @@
 # **Behavioral Cloning** 
 
-## Writeup Template
-
-### You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
-
----
 
 **Behavioral Cloning Project**
 
@@ -116,11 +111,11 @@ To augment the data sat, I also flipped images and angles thinking that this wou
 ![alt text][image6]
 ![alt text][image7]
 
-Etc ....
+Finally , I multiplied all the steering angle values by 3, to make the model more responsive during testing.
 
-After the collection process, I had X number of data points. I then preprocessed this data by ...
+After the collection process, I had around 15000 data points. 
 
 
 I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 7 as evidenced by the  ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
+I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 7 as evidenced by the rate at which the validation loss starts to increase ,which is a sign of over fitting. I used an adam optimizer so that manually training the learning rate wasn't necessary.

@@ -66,7 +66,7 @@ The model used an adam optimizer, so the learning rate was not tuned manually (m
 #### 4. Appropriate training data
 
 Training data was chosen to keep the vehicle driving on the road. I used two different training datasets. The main dataset involved center lane driving across the whole driving track. The second dataset is a small supplementary dataset which focuses on overcoming the weak areas in the main dataset.
-Unline the main dataset , the supplementary dataset is not split into traning and validation sets, rather, it is added to the training dataset.
+Unlike the main dataset , the supplementary dataset is not split into traning and validation sets, rather, it is added to the training dataset.
 
 For details about how I created the training data, see the next section. 
 

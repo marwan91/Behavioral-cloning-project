@@ -18,6 +18,7 @@ The following files can be found in this github repository:
 * drive.py
 * model.py
 * model.h5
+* video.mp4
 * README.md
 * writeup_template.md
 

@@ -26,6 +26,10 @@ The simulator can be downloaded from the udacity Classroom.
 
 ## Details About Files In This Directory
 
+### `video.mp4`
+
+A sample recording of the autonomous behavior demonstrated in the car simulator.
+
 ### `model.py`
 
 The python code for the neural network architecture that trains and outputs the model.

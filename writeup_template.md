@@ -49,9 +49,14 @@ The model.py file contains the code for training and saving the convolution neur
 
 #### 1. An appropriate model architecture has been employed
 
-My model consists of 2 convolution layers neural network with 5x5 filter sizes and depths between 12 and 24 (model.py lines 116-117) 
+My model consists of 3 convolution layers neural network with:
+* 6x6 filter sizes and depth of 12 for the first layer
+* 5x5 filter sizes and depth of 24 for the second layer
+* 4x4 filter sizes and depth of 24 for the third layer
 
-The model includes RELU layers to introduce nonlinearity (code line 20), and the data is normalized in the model using a Keras lambda layer (code line 116-117). 
+(model.py lines 132-134) 
+
+The model includes RELU layers to introduce nonlinearity, a drop-out layer (code line 138), and the data is normalized in the model using a Keras lambda layer (code line 131). 
 
 #### 2. Attempts to reduce overfitting in the model
 
@@ -97,7 +102,7 @@ Anything more than 3 fully connected layers was found worsen the network perform
 
 #### 3. Creation of the Training Set & Training Process
 
-To capture good driving behavior, I first recorded one and a half laps on track one using center lane driving. Here is an example image of center lane driving:
+To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
 
 ![alt text][image2]
 
@@ -108,16 +113,17 @@ I then recorded the vehicle driving repeatedly through the portions of the track
 ![alt text][image5]
 
 
-To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
+To augment the data sat, I also flipped images and angles thinking that this would help the model generalize. For example, here is an image that has then been flipped:
 
 ![alt text][image6]
 ![alt text][image7]
 
-Finally , I multiplied all the steering angle values by 3, to make the model more responsive during testing.
+Finally , I multiplied all the steering angle values by 2, to make the model more responsive during testing.
+I also modified the drive.py file by multiplying the steering angle values with a factor of 2 before sending them to the unity simulator. The reason for this was also to improve the car's response.
 
-After the collection process, I had around 15000 data points. 
+After the collection process, I had around 26400 data points. 
 
 
 I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 7 as evidenced by the rate at which the validation loss starts to increase ,which is a sign of over fitting. I used an adam optimizer so that manually training the learning rate wasn't necessary.
+I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 5 as evidenced by the rate at which the validation loss starts to increase ,which is a sign of over fitting. I used an adam optimizer so that to avoid manually adjusting the learning rate.

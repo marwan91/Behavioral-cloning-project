@@ -90,7 +90,9 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 
 #### 2. Final Model Architecture
 
-The final model architecture (model.py lines 116-122) consisted of 2  convolutional layers with 'relu' as the activation function, followed by 3 fully connected layers. 
+The final model architecture (model.py lines 131-139) consisted of 3  convolutional layers with 'relu' as the activation function, followed by 3 fully connected layers. 
+
+Anything more than 3 fully connected layers was found worsen the network performance as observed from experimentation, and anything less than 3 convolutional layers was also less effective. So This architecture was the simplest functional one  I could design.
 
 
 #### 3. Creation of the Training Set & Training Process
